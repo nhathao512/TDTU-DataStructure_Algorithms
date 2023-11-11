@@ -114,15 +114,29 @@ public class PriorityQueue
     public static void main(String[] args)
     {
         PriorityQueue queue = new PriorityQueue(20);
+
         queue.insert(new Person("Alex",3));
         queue.insert(new Person("Bob",2));
         queue.insert(new Person("David",6));
         queue.insert(new Person("Susan",1));
+
         Person p1 = queue.extractMax();
-        System.out.println(p1);
+        System.out.println("Dequeue: " + p1);
+
         queue.insert(new Person("Mike",5));
         queue.insert(new Person("Kevin",4));
+
         p1 = queue.extractMax();
-        System.out.println(p1);
+        System.out.println("Dequeue: " + p1);
+
+        p1 = queue.extractMax();
+        System.out.println("Dequeue: " + p1);
+
+        queue.insert(new Person("Helen", 0));
+        queue.insert(new Person("Paul", 8));
+        queue.insert(new Person("Iris", 7));
+
+        p1 = queue.extractMax();
+        System.out.println("Dequeue: " + p1);
     }
 }

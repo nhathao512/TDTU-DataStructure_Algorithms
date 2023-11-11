@@ -16,17 +16,17 @@ public class Minheap
 
     private int parent(int i)
     {
-        return i/2;
+        return i / 2;
     }
 
     private int left(int i)
     {
-        return 2*i;
+        return 2 * i;
     }
 
     private int right(int i)
     {
-        return 2*i+1;
+        return 2 * i + 1;
     }
 
     private void swap(int i,int j)
@@ -38,7 +38,7 @@ public class Minheap
 
     private void shiftUp(int i)
     {
-        while (i < 1 && heap[parent(i)] > heap[i])
+        while (i > 1 && heap[parent(i)] > heap[i])
         {
             swap(parent(i), i);
             i = parent(i);
